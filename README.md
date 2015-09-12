@@ -1,5 +1,7 @@
 # csv2xls
 
+## Usage
+
 ```
 Usage: csv2xls [options] <file>
 
@@ -17,12 +19,12 @@ Usage: csv2xls [options] <file>
 $ csv2xls -e shift-jis -o sample.xls sample.csv
 ```
 
-# How to build
+## How to build
 
 ```
 $ sbt universal:packageBin
 ```
 
-# LICENSE
+## LICENSE
 
 Apache 2.0
