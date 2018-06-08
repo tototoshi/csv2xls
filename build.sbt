@@ -1,4 +1,4 @@
-scalariformSettings
+import scalariform.formatter.preferences._
 
 enablePlugins(JavaAppPackaging)
 
@@ -14,5 +14,3 @@ libraryDependencies ++= Seq(
   "com.github.tototoshi" %% "scala-csv" % "1.2.2",
   "org.scalatest" %% "scalatest" % "2.2.4" % "test"
 )
-
-
