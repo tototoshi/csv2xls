@@ -10,7 +10,7 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   "com.github.scopt" %% "scopt" % "4.0.0",
-  "org.apache.poi" % "poi" % "3.17",
+  "org.apache.poi" % "poi" % "5.0.0",
   "com.github.tototoshi" %% "scala-csv" % "1.3.6",
   "org.scalatest" %% "scalatest" % "3.2.5" % "test"
 )
