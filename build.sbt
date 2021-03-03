@@ -1,7 +1,7 @@
 import scalariform.formatter.preferences._
 
 lazy val root = project.in(file("."))
-  .enablePlugins(JavaAppPackaging)
+  .enablePlugins(JavaAppPackaging, BuildInfoPlugin)
   .settings(
     organization := "com.github.tototoshi",
     name := """csv2xls""",
@@ -12,5 +12,7 @@ lazy val root = project.in(file("."))
       "org.apache.poi" % "poi" % "5.0.0",
       "com.github.tototoshi" %% "scala-csv" % "1.3.7",
       "org.scalatest" %% "scalatest" % "3.2.5" % "test"
-    )
+    ),
+    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+    buildInfoPackage := "com.github.tototoshi.csv2xls.buildinfo"
   )
