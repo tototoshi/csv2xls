@@ -2,6 +2,8 @@ import scalariform.formatter.preferences._
 
 enablePlugins(JavaAppPackaging)
 
+organization := "com.github.tototoshi"
+
 name := """csv2xls"""
 
 version := "0.1.0"
