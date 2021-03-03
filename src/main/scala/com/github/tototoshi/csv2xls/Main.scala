@@ -1,8 +1,8 @@
 package com.github.tototoshi.csv2xls
 
 import java.io.{ File, FileOutputStream }
-
 import com.github.tototoshi.csv.CSVReader
+import com.github.tototoshi.csv2xls.buildinfo.BuildInfo
 import org.apache.poi.hssf.usermodel.HSSFWorkbook
 import scopt.OptionParser
 
@@ -11,10 +11,13 @@ case class Config(in: File, out: File = new File("out.xls"), sheet: String = "sh
 object Main {
 
   val parser = new OptionParser[Config]("csv2xls") {
-    opt[File]('o', "out") action { (out, c) => c.copy(out = out) } text "output file"
-    opt[String]('s', "sheet") action { (sheet, c) => c.copy(sheet = sheet) } text "sheet name"
-    opt[String]('e', "encoding") action { (encoding, c) => c.copy(encoding = encoding) } text "encoding of csv file (default: utf-8)"
-    arg[File]("<file>") action { (in, c) => c.copy(in = in) } text "input file"
+    head(BuildInfo.name, BuildInfo.version)
+    version('v', "version").text("Print the version")
+    help('h', "help").text("Print a help")
+    opt[File]('o', "out") action { (out, c) => c.copy(out = out) } text "Specify an output file"
+    opt[String]('s', "sheet") action { (sheet, c) => c.copy(sheet = sheet) } text "Specify the sheet name"
+    opt[String]('e', "encoding") action { (encoding, c) => c.copy(encoding = encoding) } text "Specify the encoding of csv file (default: utf-8)"
+    arg[File]("<file>") action { (in, c) => c.copy(in = in) } text "Specify an input file"
   }
 
   def main(args: Array[String]): Unit = {
