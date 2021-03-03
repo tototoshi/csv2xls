@@ -14,5 +14,31 @@ lazy val root = project.in(file("."))
       "org.scalatest" %% "scalatest" % "3.2.5" % "test"
     ),
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
-    buildInfoPackage := "com.github.tototoshi.csv2xls.buildinfo"
+    buildInfoPackage := "com.github.tototoshi.csv2xls.buildinfo",
+    publishMavenStyle := true,
+    publishTo := {
+      val nexus = "https://oss.sonatype.org/"
+      if (version.value.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
+      else Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+    },
+    publishArtifact in Test := false,
+    pomExtra := <url>http://github.com/tototoshi/csv2xls</url>
+      <licenses>
+        <license>
+          <name>Apache License, Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+          <distribution>repo</distribution>
+        </license>
+      </licenses>
+      <scm>
+        <url>git@github.com:tototoshi/csv2xls.git</url>
+        <connection>scm:git:git@github.com:tototoshi/csv2xls.git</connection>
+      </scm>
+      <developers>
+        <developer>
+          <id>tototoshi</id>
+          <name>Toshiyuki Takahashi</name>
+          <url>https://github.com/tototoshi</url>
+        </developer>
+      </developers>
   )
