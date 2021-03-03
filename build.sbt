@@ -1,7 +1,7 @@
 import scalariform.formatter.preferences._
 
 lazy val root = project.in(file("."))
-  .enablePlugins(JavaAppPackaging, BuildInfoPlugin)
+  .enablePlugins(BuildInfoPlugin)
   .settings(
     organization := "com.github.tototoshi",
     name := """csv2xls""",

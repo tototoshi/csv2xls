@@ -19,12 +19,6 @@ Usage: csv2xls [options] <file>
 $ csv2xls -e shift-jis -o sample.xls sample.csv
 ```
 
-## How to build
-
-```
-$ sbt universal:packageBin
-```
-
 ## LICENSE
 
 Apache 2.0
