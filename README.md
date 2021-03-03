@@ -5,14 +5,12 @@
 ```
 Usage: csv2xls [options] <file>
 
-     -o <value> | --out <value>
-           output file
-     -s <value> | --sheet <value>
-           sheet name
-     -e <value> | --encoding <value>
-           encoding of csv file (default: utf-8)
-     <file>
-           input file
+  -v, --version           Print the version
+  -h, --help              Print a help
+  -o, --out <value>       Specify an output file
+  -s, --sheet <value>     Specify the sheet name
+  -e, --encoding <value>  Specify the encoding of csv file (default: utf-8)
+  <file>                  Specify an input file
 ```
 
 ```
