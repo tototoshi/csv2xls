@@ -1,5 +1,9 @@
 # csv2xls
 
+```
+$ cs bootstrap com.github.tototoshi::csv2xls:latest.stable -o /path/to/csv2xls
+```
+
 ## Usage
 
 ```
