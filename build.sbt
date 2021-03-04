@@ -5,7 +5,7 @@ lazy val root = project.in(file("."))
   .settings(
     organization := "com.github.tototoshi",
     name := """csv2xls""",
-    version := "0.1.0",
+    version := "0.1.1-SNAPSHOT",
     scalaVersion := "2.13.5",
     libraryDependencies ++= Seq(
       "com.github.scopt" %% "scopt" % "4.0.0",
