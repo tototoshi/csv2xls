@@ -1,6 +1,6 @@
 package com.github.tototoshi.csv2xls
 
-import com.github.tototoshi.csv.CSVReader
+import com.github.tototoshi.csv.{ CSVReader, defaultCSVFormat }
 import org.apache.poi.hssf.usermodel.HSSFWorkbook
 
 import java.io.FileOutputStream
@@ -15,7 +15,7 @@ object Converter {
       val s1 = wb.createSheet(config.sheet)
 
       Using.resource(CSVReader.open(config.in, config.encoding)) { reader =>
-        val rowValues = reader.all
+        val rowValues = reader.all()
 
         for {
           (cellValues, i) <- rowValues.zipWithIndex
