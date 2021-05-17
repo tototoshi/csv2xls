@@ -21,7 +21,7 @@ lazy val root = project.in(file("."))
       if (version.value.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
       else Some("releases"  at nexus + "service/local/staging/deploy/maven2")
     },
-    publishArtifact in Test := false,
+    Test / publishArtifact := false,
     pomExtra := <url>http://github.com/tototoshi/csv2xls</url>
       <licenses>
         <license>
