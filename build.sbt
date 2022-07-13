@@ -8,7 +8,7 @@ lazy val root = project.in(file("."))
     version := "0.1.1-SNAPSHOT",
     scalaVersion := "3.1.3",
     libraryDependencies ++= Seq(
-      "com.github.scopt" %% "scopt" % "4.0.1",
+      "com.github.scopt" %% "scopt" % "4.1.0",
       "org.apache.poi" % "poi" % "5.2.2",
       "com.github.tototoshi" %% "scala-csv" % "1.3.10",
       "org.scalatest" %% "scalatest" % "3.2.12" % "test"
