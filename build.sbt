@@ -6,7 +6,7 @@ lazy val root = project.in(file("."))
     organization := "com.github.tototoshi",
     name := """csv2xls""",
     version := "0.1.1-SNAPSHOT",
-    scalaVersion := "3.1.3",
+    scalaVersion := "3.2.0",
     libraryDependencies ++= Seq(
       "com.github.scopt" %% "scopt" % "4.1.0",
       "org.apache.poi" % "poi" % "5.2.2",
