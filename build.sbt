@@ -11,7 +11,7 @@ lazy val root = project.in(file("."))
       "com.github.scopt" %% "scopt" % "4.1.0",
       "org.apache.poi" % "poi" % "5.2.3",
       "com.github.tototoshi" %% "scala-csv" % "1.3.10",
-      "org.scalatest" %% "scalatest" % "3.2.13" % "test"
+      "org.scalatest" %% "scalatest" % "3.2.16" % "test"
     ),
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
     buildInfoPackage := "com.github.tototoshi.csv2xls.buildinfo",
