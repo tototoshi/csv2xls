@@ -10,7 +10,7 @@ lazy val root = project.in(file("."))
     libraryDependencies ++= Seq(
       "com.github.scopt" %% "scopt" % "4.1.0",
       "org.apache.poi" % "poi" % "5.2.3",
-      "com.github.tototoshi" %% "scala-csv" % "1.3.10",
+      "com.github.tototoshi" %% "scala-csv" % "1.4.0",
       "org.scalatest" %% "scalatest" % "3.2.13" % "test"
     ),
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
